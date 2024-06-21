@@ -1,39 +1,28 @@
-{% extends 'base.html.twig' %}
-
-
-{% block title %}Hello NavbarController!{% endblock %}
 
 {% block stylesheets %}
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/navbar.css">
-
 {% endblock %}
 
-
-{% block body %}
 <nav class="navbar navbar-expand" data-bs-theme="light">
-    <div class="container-fluid d-flex justify-content-between">
-      
-      <img src="assets/img/logoSM.svg" alt="Logo" class="navbar-brand" id="logo" href="#">
-      
-      <div class="d-flex">
-      <form>
+  <div class="container-fluid d-flex justify-content-between px-5">
+    {# The logo #}
+    <img src="assets/img/logoSM.svg" alt="Logo" class="navbar-brand" id="logo" href="#">
+    {# The search bar #}
+    <div class="d-flex">
+      <form class="d-flex">
         <input class="form-control me-sm-2" type="search" placeholder="Search" id="searchButton">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
+      {# The two buttons : Sign up and Login #}
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link button signup" href="#">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link button login" href="#">Login</a>
+        </li>
+      </ul>
 
-        <ul class="navbar-nav me-auto">
-         
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          
-        </ul>
-      
     </div>
   </div>
-  </nav>
-{% endblock %}
+</nav>
