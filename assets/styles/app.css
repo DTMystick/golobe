@@ -5,3 +5,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+  .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+  }
