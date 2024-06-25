@@ -1,10 +1,16 @@
-styles.css */
-
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-} 
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
 .cart {
     display: flex;
     margin-top: 20px;
