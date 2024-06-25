@@ -31,7 +31,7 @@
 
 /* Styles pour les images */
 #hmpage {
-    margin-left: 300px;
+    /* margin-left: 300px; */
     width: 100%;
     height: auto;
     max-width: 600px;
@@ -66,7 +66,7 @@
     position: relative;
     width: 100%;
     max-width: 300px; /* Largeur maximale des cartes */
-    height: auto;
+    height: 400px;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -85,6 +85,7 @@
     height: 100%; /* Remplir toute la hauteur de la carte */
     object-fit: cover; /* Ajuster l'image sans déformation */
     transition: transform 0.3s ease; /* Animation pour la transformation de l'image */
+    position: absolute;
 }
 
 .card:hover .card-img-top {
@@ -112,6 +113,7 @@
 }
 
 .card-title {
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
