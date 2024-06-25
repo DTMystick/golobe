@@ -1,66 +1,18 @@
-/* Appliquer un fond dégradé fixe au body */
-body {
-    
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1 {
+/* Styles pour les titres */
+.main-title {
     display: flex;
     font-size: 80px;
     font-weight: bold;
     letter-spacing: 5px;
     text-align: left;
     color: #000;
-
 }
 
-p {
-    font-size: 24px;
-    color: #333;
-}
-
-.card-text {
-    font-size: 14px;
-    color: #fff;
-    font-style: italic;
-    display: none; /* Masquer le texte de description par défaut */
-}
-
-.card-title {
-    font-weight: bold;
-    color: #fff;
-}
-
-.card-hover-text {
-    display: none; /* Masquer le texte de survol par défaut */
-    font-size: 18px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#popular {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    pointer-events: none; /* Pour éviter que le texte de survol interfère avec les clics */
-    transition: opacity 0.3s ease; /* Transition pour une apparition en douceur */
-}
-
-.card:hover .card-text {
-    display: block; /* Afficher le texte de description au survol */
-}
-
-.card:hover .card-hover-text {
-    display: block; /* Afficher le texte de survol au survol */
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 #explore {
@@ -68,6 +20,16 @@ p {
     font-weight: bold;
 }
 
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#check {
+    color: #A1A1A1;
+}
+
+/* Styles pour les images */
 #hmpage {
     margin-left: 300px;
     width: 100%;
@@ -79,45 +41,19 @@ p {
     object-fit: cover;
 }
 
-#popular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px 0;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-#check {
-    color: #A1A1A1;
-}
-
-main {
-    padding: 20px;
-}
-
-.stars {
-    color: rgba(241, 194, 91, 0.822);
-    letter-spacing: 3px;
-}
-
+/* Styles pour les boutons */
 .btn {
     border-radius: 25%;
     background-color: #00A0B1;
     align-self: flex-end;
 }
 
+/* Styles pour les sections */
 .content {
     padding: 20px;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 40px;
-    font-weight: bold;
-}
-
+/* Styles pour les destinations */
 .destinations {
     display: flex;
     flex-wrap: wrap;
@@ -125,10 +61,12 @@ h2 {
     gap: 20px;
 }
 
+/* Styles pour les cartes */
 .card {
     position: relative;
-    width: 24rem;
-    height: 350px;
+    width: 100%;
+    max-width: 300px; /* Largeur maximale des cartes */
+    height: auto;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -144,30 +82,58 @@ h2 {
 
 .card-img-top {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Remplir toute la hauteur de la carte */
+    object-fit: cover; /* Ajuster l'image sans déformation */
+    transition: transform 0.3s ease; /* Animation pour la transformation de l'image */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Zoom sur l'image au survol */
+}
+
+.card-title-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
-}
-
-.card-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
     width: 100%;
-    padding: 20px;
-    transition: background-color 0.3s ease;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    color: #ffffff; /* Couleur du texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Masquer par défaut */
+    transition: opacity 0.3s ease; /* Animation d'apparition */
 }
 
-.card:hover .card-body {
-    background-color: rgba(0, 0, 0, 0.8);
+.card:hover .card-title-overlay {
+    opacity: 1; /* Afficher au survol */
 }
 
 .card-title {
-    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    background: transparent; /* Fond transparent */
+}
+
+.card-text {
+    font-size: 14px;
+    color: #ffffff; /* Couleur du texte */
+    font-style: italic;
+    display: none; /* Masquer par défaut */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease; /* Animation d'apparition */
+}
+
+.card:hover .card-text {
+    display: block; /* Afficher au survol */
 }

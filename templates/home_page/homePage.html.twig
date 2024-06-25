@@ -1,6 +1,16 @@
 {% extends 'base.html.twig' %}
 
-    {% block body %}
+
+{% block body %}
+<html>
+
+<head>
+    <title>GoLobe</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+
+<body>
     <main>
         <div class="row">
             <div class="col-6">
@@ -8,10 +18,12 @@
             </div>
             <div class="col-6">
     <h3 id="explore">EXPLORE THE WORLD</h3>
-    <h1 data-text="Its Time To Travel Around The World"><span>Its Time<br>To Travel Around<br>The World</span></h1><br>
+    <h1 class="main-title" data-text="Its Time To Travel Around The World">Its Time<br>To Travel Around<br>The World</h1>
+    <br>
     <p id="check">Check Off the Ultimate Global Travel Checklist With your Travel Partner!
         <br>Make your vacation a fun, exciting, and unforgettable experience.</p>
     <br>
+    
     <button type="button" class="btn btn-primary">Discover Now</button>
 </div>
 
@@ -54,6 +66,9 @@
     <footer>
     
     </footer>
-    {% endblock %}
+</body>
 
+</html>
+
+{% endblock %}
 
