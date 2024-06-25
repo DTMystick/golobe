@@ -1,10 +1,4 @@
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
 
 .container {
     width: 80%;
@@ -12,47 +6,7 @@ body {
     padding: 20px;
 }
 
-header {
-    background-color: #ffffff;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-header .container {
-    display: flex;
-    align-items: center;
-}
-
-header .logo {
-    width: 150px;
-}
-
-header input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    margin: 0 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-header .btn-search {
-    padding: 10px 20px;
-    background-color: #5cb85c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-header .user-info {
-    margin-left: 10px;
-}
-
-header .user-icon {
-    font-size: 24px;
-    text-decoration: none;
-    color: #333;
-}
 
 main h1 {
     text-align: center;
