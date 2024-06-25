@@ -3,42 +3,60 @@
 {% block title %}AdminDashboard{% endblock %}
 
 {% block body %}
+<div id="dashboard">
 <main id="main-content">
         <aside id="sidebar">
             <ul id="sidebar-menu">
-                <li class="sidebar-item">Dashboard</li>
-                <li class="sidebar-item">User App Installed</li>
-                <li class="sidebar-item">Security & Confidentiality</li>
-                <li class="sidebar-item">Members</li>
-                <li class="sidebar-item">User Connect Safe</li>
-                <li class="sidebar-item">User Last Week Activity</li>
-                <li class="sidebar-item">Notifications</li>
-                <li class="sidebar-item">Latest Notifications</li>
-                <li class="sidebar-item">User Per Country</li>
+                <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                </li>
+                     <li class="side-items">
+                         <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+                     </li>
+                         <li class="side-items">
+                            <a href="#"><i class="fa-solid fa-chart-line"></i> Recent Activity</a>
+                        </li>
+                     <li class="side-items">
+                        <a href="#"><i class="fa-solid fa-square-person-confined"></i> Activity Management</a>
+                    </li>
+                 <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-plane"></i> Destination Management</a>
+                </li>
+                 <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-hotel"></i> Hotel Management</a>
+                </li>
+                 <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+                </li>
+                 <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-bell-slash"></i> Latest Notifications</a>
+                </li>
+                <li class="side-items">
+                    <a href="#"><i class="fa-solid fa-globe"></i> User Per Country</a>
+                </li>
             </ul>
         </aside>
 
         <section id="profile-details">
             <h2 id="profile-title">PROFILE DETAILS</h2>
             <div id="profile-info">
-                <img src="profile-picture.jpg" alt="Profile Picture" id="profile-pic">
+                <img src="assets/IMG/profile-picturel.jpg" alt="Profile Picture" id="profile-pic">
                 <div id="profile-text">
-                    <h3 id="profile-name">GoLobe Admin</h3>
-                    <p id="profile-email">admin@golobe.com</p>
+                    <h3 id="profile-name"></h3>
+                    <p id="profile-email"></p>
                 </div>
-                <button id="edit-btn">Edit</button>
+                <button id="edit-btn"><i class="fa-solid fa-user-pen"></i>  Edit Picture</button>
             </div>
             <form id="edit-form">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" class="form-input" value="GoLobe Admin">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="GoLobe Admin">
+            
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="admin@golobe.com">
                 
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-input" value="admin@golobe.com">
-                
-                <button type="submit" id="edit-details-btn">Edit Details</button>
+                <button type="submit" id="edit-details-btn"><i class="fa-solid fa-pen"></i> Edit Details</button>
             </form>
         </section>
+        </div>
     </main>
-    </body>
-</html>
 {% endblock %}
