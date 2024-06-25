@@ -1,4 +1,34 @@
 .cartess{
-    background-color: blue;
+    background-color: rgb(76, 76, 173);
     color: white;
+    border-radius: 15%;
+}
+
+.dalal{
+    text-align: center;
+}
+ 
+.taneu {
+    margin-left: 5%;
+}
+
+.xaliss {
+    color: red;
+    font-style: italic;
+    margin-left: 5%;
+}
+
+.tokyo .card-img-top{
+    height: 100%;
+    
+}
+
+.tokyo .card {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tokyo{
+    margin-left: 3%;
+    margin-right: 3%;
 }

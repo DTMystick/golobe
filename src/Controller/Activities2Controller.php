@@ -11,7 +11,7 @@ class Activities2Controller extends AbstractController
     #[Route('/activities2', name: 'app_activities2')]
     public function index(): Response
     {
-        return $this->render('activities2/activities2.html.twig', [
+        return $this->render('activities2/barcelona.html.twig', [
             'controller_name' => 'Activities2Controller',
         ]);
     }
