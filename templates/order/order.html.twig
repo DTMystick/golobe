@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon panier{% endblock %}
+
+
+
+{% block body %}
+    <main class="container">
+        <h1 class="titre">Recap of my cart</h1>
+        <div class="cart">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="assets/IMG/Valo_Hotel6.jpg" alt="Helsinki" class="product-image">
+                    <div class="product-details">
+                        <h2>Valo Hotel</h2>
+                        <p>6 road, michael fox 12334</p>
+                        <div class="product-actions">
+                            <input type="number" value="1" min="1">
+                            <p class="price">395 €</p>
+                            <button class="btn-remove">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="assets/IMG/Valo_Hotel10.jpg" alt="Golan Museum visit" class="product-image">
+                    <div class="product-details">
+                        <h2>Activity 1</h2>
+                        <p>Golan Museum visit</p>
+                        <div class="product-actions">
+                            <input type="number" value="1" min="1">
+                            <p class="price">55 €</p>
+                            <button class="btn-remove">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="assets/IMG/Valo_Hotel8.jpg" alt="Fjord visit" class="product-image">
+                    <div class="product-details">
+                        <h2>Activity 2</h2>
+                        <p>Fjord visit</p>
+                        <div class="product-actions">
+                            <input type="number" value="1" min="1">
+                            <p class="price">95 €</p>
+                            <button class="btn-remove">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h2 class="titres">Recap</h2>
+                <p>Products: ...€</p>
+                <p class="total"><strong>Total: ...€</strong></p>
+                <button class="btn-validate">Payment process</button>
+                <br>
+                <br>
+                <button class="btn-validate" id="modify">Add activity</button><br>
+
+                    <ul class="customer-service">
+                        <li>Travel insurance</li>
+                        <li>Card secure 3d</li>
+                        <li>Data protection</li>
+                    </ul>
+                <div class="customer-service">
+                    <p>A question ? Contact us to 08.82.53.40.22</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
+
+
