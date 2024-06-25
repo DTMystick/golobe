@@ -1,0 +1,20 @@
+.titleFooter {
+    font-weight: bold;
+}
+
+#logoFooter{
+    width: 50%;
+}
+
+#footer ul, #footer li {
+    list-style: none;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer .socialMedia {
+    width: 10%;
+}
