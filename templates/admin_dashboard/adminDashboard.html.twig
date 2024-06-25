@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdminDashboard{% endblock %}
+
+{% block body %}
+<main id="main-content">
+        <aside id="sidebar">
+            <ul id="sidebar-menu">
+                <li class="sidebar-item">Dashboard</li>
+                <li class="sidebar-item">User App Installed</li>
+                <li class="sidebar-item">Security & Confidentiality</li>
+                <li class="sidebar-item">Members</li>
+                <li class="sidebar-item">User Connect Safe</li>
+                <li class="sidebar-item">User Last Week Activity</li>
+                <li class="sidebar-item">Notifications</li>
+                <li class="sidebar-item">Latest Notifications</li>
+                <li class="sidebar-item">User Per Country</li>
+            </ul>
+        </aside>
+
+        <section id="profile-details">
+            <h2 id="profile-title">PROFILE DETAILS</h2>
+            <div id="profile-info">
+                <img src="profile-picture.jpg" alt="Profile Picture" id="profile-pic">
+                <div id="profile-text">
+                    <h3 id="profile-name">GoLobe Admin</h3>
+                    <p id="profile-email">admin@golobe.com</p>
+                </div>
+                <button id="edit-btn">Edit</button>
+            </div>
+            <form id="edit-form">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-input" value="GoLobe Admin">
+                
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" value="admin@golobe.com">
+                
+                <button type="submit" id="edit-details-btn">Edit Details</button>
+            </form>
+        </section>
+    </main>
+    </body>
+</html>
+{% endblock %}
