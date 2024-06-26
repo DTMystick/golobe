@@ -46,18 +46,18 @@
   vertical-align: middle;
 }
 
-#visitor .button-18:hover,
-#visitor .button-18:focus { 
+#visitor .button:hover,
+#visitor .button:focus { 
   background-color: #16437E;
   color: #ffffff;
 }
 
-#visitor .button-18:active {
+#visitor .button:active {
   background: #09223b;
   color: rgb(255, 255, 255, .7);
 }
 
-#visitor .button-18:disabled { 
+#visitor .button:disabled { 
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);

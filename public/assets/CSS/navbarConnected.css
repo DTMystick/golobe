@@ -9,19 +9,15 @@
     border-color: #000000;
 }
 /* Two classes for the color of the button */
-#stay {
+#stay , #profile{
     color: #000000;
     font-size: larger;
+    /* box-shadow: 2px 2px 5px black; */
 }
 
 #imgAirplane, #imgProfile{
+  position: absolute;
     width: 10%;
-}
-
-#profile {
-    color: black;
-    font-size: larger;
-
 }
 
 /* The shared code for both buttons */
@@ -53,18 +49,18 @@
   vertical-align: middle;
 }
 
-.button-18:hover,
-.button-18:focus { 
+.button:hover,
+.button:focus { 
   background-color: #16437E;
   color: #ffffff;
 }
 
-.button-18:active {
+.button:active {
   background: #09223b;
   color: rgb(255, 255, 255, .7);
 }
 
-.button-18:disabled { 
+.button:disabled { 
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
