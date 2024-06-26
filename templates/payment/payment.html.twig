@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Payment Page{% endblock %}
+
+{% block body %}
+    <div id="reservation-container">
+        <div id="reservation-content">
+            <div id="hotel-info">
+                <div id="hotel-header">
+                    <img src="assets/IMG/hotel-paris.jpg" alt="Hotel" class="pic">
+                    <div class="hotel-details">
+                        <h1 id="custom-h1">First Hotel G</h1>
+                        <p id="modern">Modern Hotel at Gothenburg Central Station</p>
+                        <p>More Than 4,325 Reviews <span class="rating">9.2</span></p>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="location-info">
+                    <h3 id="custom-h3"><i class="fa-solid fa-location-dot"></i> Location Information</h3>
+                    <ul>
+                        <li>0 m to City Centre</li>
+                        <li>24 km to Landvetter Airport</li>
+                        <li>2.5 km to Liseberg Amusement Park</li>
+                        <li>0 m to Gothenburg Central Station</li>
+                    </ul>
+                    <ul>
+                        <li>Breakfast Included</li>
+                        <li>Free Wi-Fi</li>
+                        <li>Free Parking</li>
+                        <li>Pets Are Welcome</li>
+                        <li>Free Laundry Service</li>
+                        <li>No Smoking</li>
+                        <li>Free Entrance Exercise Centre</li>
+                    </ul>
+                </div>
+                <div id="payment-info">
+                    <h3 id="custom-h3">Payment Information</h3>
+                    <p>Original Price: $960 (4 Nights)</p>
+                    <p>GoLobe Loyalty Discount 4%: $100 Discount</p>
+                    <p>Total Amount For Payment: $860</p>
+                </div>
+            </div>
+            <div id="form-container">
+                <div id="user-info">
+                    <div id="user-header">
+                        <img src="assets/IMG/anna.jpg" alt="User" class="pic">
+                        <div class="user-details">
+                            <p>GoLobe Anna</p>
+                            <p>GoLobe@Gmail.Com</p>
+                        </div>
+                        <button class="btn-secondary">Check Your Booking History</button>
+                    </div>
+                    <p>Who Are You Booking For?</p>
+                    <label><input type="radio" name="bookingFor" checked> I Am The Main Guest</label>
+                    <label><input type="radio" name="bookingFor"> Booking Is For Someone Else</label>
+                </div>
+                <form id="reservation-form">
+                    <div>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="First name">
+                    </div>
+                    <div>
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName" placeholder="Middle name">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name">
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                    </div>
+                    <div>
+                        <label for="assistanceOption">If You Need Assistance</label>
+                        <select id="assistanceOption" name="assistanceOption">
+                            <option value="Not Provided">Not Provided</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="region">Region</label>
+                        <input type="text" id="region" name="region" placeholder="Region">
+                    </div>
+                    <div>
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Country">
+                    </div>
+                    <div id="card-info">
+                        <h3 id="custom-h3">Bank Card Information</h3>
+                        <div>
+                            <label for="cardName">Full Name On The Card</label>
+                            <input type="text" id="cardName" name="cardName" placeholder="GoLobe User">
+                        </div>
+                        <div>
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                        </div>
+                        <div>
+                            <label for="expDate">EXP Date</label>
+                            <input type="text" id="expDate" name="expDate" placeholder="MM/YY">
+                        </div>
+                        <div>
+                            <label for="cvc">CVC</label>
+                            <input type="text" id="cvc" name="cvc" placeholder="CVC">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Payment</button>
+                    <button type="button" class="btn-secondary">Save In Shortcut</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
