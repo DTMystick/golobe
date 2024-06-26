@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HistoricController!{% endblock %}
+
+{% block body %}
+
+
+        <div class="card-footer">
+          <small class="text-body-secondary">  <button class="btn btn-primary">Details</button></small>
+       
+<div class="container mt-5">
+    <h2 class="mb-4">Order History for the Customer ID: 12345</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID Command</th>
+            <th scope="col">Date</th>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>2024-06-20</td>
+            <td>hotel a</td>
+        
+            <td>€100</td>
+            <td>€200</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>2024-06-21</td>
+            <td>activity a</td>
+        
+            <td>€150</td>
+            <td>€150</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>2024-06-22</td>
+            <td>Activity b</td>
+    
+            <td>€75</td>
+            <td>€210</td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>2024-06-22</td>
+            <td>Activity c</td>
+    
+            <td>€75</td>
+            <td>€210</td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>2024-06-22</td>
+            <td>Activity d</td>
+    
+            <td>€25</td>
+            <td>€125</td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>2024-06-22</td>
+            <td>Activity e</td>
+    
+            <td>€35</td>
+            <td>€225</td>
+          </tr>
+          <tr>
+            <td>007</td>
+            <td>2024-06-22</td>
+            <td>Activity f</td>
+    
+            <td>€35</td>
+            <td>€225</td>
+          </tr>
+
+
+          <!-- Ajoutez d'autres lignes ici pour plus de commandes -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+{% endblock %}
