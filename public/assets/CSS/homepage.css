@@ -1,5 +1,5 @@
 /* Styles pour les titres */
-.main-title {
+#homepage .main-title {
     display: flex;
     font-size: 80px;
     font-weight: bold;
@@ -20,7 +20,7 @@
     font-weight: bold;
 }
 
-.card-title {
+#homepage .card-title {
     font-size: 24px;
     font-weight: bold;
 }
@@ -30,8 +30,8 @@
 }
 
 /* Styles pour les images */
-#hmpage {
-    margin-left: 300px;
+#imgHomepage {
+    /* margin-left: 300px; */
     width: 100%;
     height: auto;
     max-width: 600px;
@@ -42,19 +42,19 @@
 }
 
 /* Styles pour les boutons */
-.btn {
+#homepage .btn {
     border-radius: 25%;
     background-color: #00A0B1;
     align-self: flex-end;
 }
 
 /* Styles pour les sections */
-.content {
+#homepage .content {
     padding: 20px;
 }
 
 /* Styles pour les destinations */
-.destinations {
+#homepage .destinations {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,11 +62,11 @@
 }
 
 /* Styles pour les cartes */
-.card {
+#homepage .card {
     position: relative;
     width: 100%;
     max-width: 300px; /* Largeur maximale des cartes */
-    height: auto;
+    height: 400px;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -76,22 +76,23 @@
     transition: box-shadow 0.3s ease;
 }
 
-.card:hover {
+#homepage .card:hover {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.29);
 }
 
-.card-img-top {
+#homepage .card-img-top {
     width: 100%;
     height: 100%; /* Remplir toute la hauteur de la carte */
     object-fit: cover; /* Ajuster l'image sans déformation */
     transition: transform 0.3s ease; /* Animation pour la transformation de l'image */
+    position: absolute;
 }
 
-.card:hover .card-img-top {
+#homepage .card:hover .card-img-top {
     transform: scale(1.1); /* Zoom sur l'image au survol */
 }
 
-.card-title-overlay {
+#homepage .card-title-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,11 +108,12 @@
     transition: opacity 0.3s ease; /* Animation d'apparition */
 }
 
-.card:hover .card-title-overlay {
+#homepage .card:hover .card-title-overlay {
     opacity: 1; /* Afficher au survol */
 }
 
-.card-title {
+#homepage .card-title {
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -119,7 +121,7 @@
     background: transparent; /* Fond transparent */
 }
 
-.card-text {
+#homepage .card-text {
     font-size: 14px;
     color: #ffffff; /* Couleur du texte */
     font-style: italic;
@@ -134,6 +136,6 @@
     transition: opacity 0.3s ease; /* Animation d'apparition */
 }
 
-.card:hover .card-text {
+#homepage .card:hover .card-text {
     display: block; /* Afficher au survol */
 }
