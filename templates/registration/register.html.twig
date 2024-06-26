@@ -3,23 +3,40 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+<div class="my-background">
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
-    <h1>Create Account</h1>
+    <h1 id="ca">Create Account</h1>
 
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.firstName) }}
-        {{ form_row(registrationForm.lastName) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.password, {
+    
+    <div class="custom-account1">
+        <div class="data m-1 p-1">
+        {{ form_row(registrationForm.firstName) }}</div>
+        <div class=" data m-1 p-1">{{ form_row(registrationForm.lastName) }}</div>
+        
+        <div class="data m-1 p-1">{{ form_row(registrationForm.email) }}</div>
+        <div class="data m-1 p-1">{{ form_row(registrationForm.password, {
             label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        }) }}</div>
+        <div class="data m-1 p-1">{{ form_row(registrationForm.agreeTerms) }}</div>
+       
+     
+     {{ form_end(registrationForm) }}
+    
+<br>
+       <button class="learn-more">
+  <span class="circle" aria-hidden="true">
+  <span class="icon arrow"></span>
+  </span>
+  <span class="button-text">Sign up </span>
+</button>
+<h6><a href="#" style="color: black;">You already have an account?Sign up</a></h6>
 
-        <button type="submit" class="btn">Sign up</button>
-    {{ form_end(registrationForm) }}
+   </div>  
+</div>
 {% endblock %}

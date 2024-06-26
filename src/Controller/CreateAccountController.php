@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CreateAccountController extends AbstractController
 {
-    #[Route('/create/account', name: 'app_create_account')]
+    #[Route('/createAccount', name: 'app_create_account')]
     public function index(): Response
     {
         return $this->render('create_account/createAccount.html.twig', [
