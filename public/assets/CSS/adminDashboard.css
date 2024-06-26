@@ -1,0 +1,128 @@
+/* Styles pour le contenu principal */
+#main-content {
+    display: flex;
+}
+
+/* Styles pour la barre latérale */
+#sidebar {
+    width: 250px;
+    background-color: #E6E6E6;
+    padding: 20px;
+}
+
+#sidebar-menu {
+    list-style: none;
+    padding: 0;
+    color: transparent;
+}
+
+.fa-gauge {
+    font-family:'Inter', sans-serif; !important
+}
+
+.side-items {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.side-items a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Styles pour les détails du profil */
+#profile-details {
+    flex: 1;
+    padding: 40px;
+    background: transparent;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#profile-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+#profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-name {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+#profile-email {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+#edit-btn {
+    background-color: #fff;
+    color: #333;
+    border: #333;
+    border-color: #333;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Styles pour le formulaire */
+#edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.form-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 30%;
+}
+
+#edit-details-btn {
+    background-color:transparent;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 10%;
+}
+
+.fa-pen{
+    color: red;
+}
+
+#dashboard {
+    margin-bottom: 7%;
+}
+
