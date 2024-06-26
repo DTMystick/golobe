@@ -1,0 +1,93 @@
+/* public/styles.css */
+#reservation-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#reservation-content {
+    display: flex;
+    gap: 20px;
+}
+
+#hotel-info, #form-container {
+    width: 50%;
+}
+
+#hotel-header, #user-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.hotel-details, .user-details {
+    flex-grow: 1;
+}
+
+#location-info, #payment-info, #card-info {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+#user-header img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+#user-header button {
+    margin-left: auto;
+}
+
+#reservation-form div {
+    margin-bottom: 15px;
+}
+
+#reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reservation-form input, #reservation-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#card-info h3 {
+    margin-bottom: 15px;
+}
+
+#card-info div {
+    margin-bottom: 10px;
+}
