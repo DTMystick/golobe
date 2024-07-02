@@ -1,0 +1,29 @@
+
+    /* Style du bouton */
+    .custom-button {
+        background-color: rgb(41, 41, 41);
+        color: white;
+        border-radius: 15px; /* Ajustez la valeur pour l'arrondi souhaité */
+        padding: 10px 50px; /* Ajustez les marges intérieures pour l'espacement */
+        font-size: 16px; /* Ajustez la taille de police */
+        border: none; /* Supprimez la bordure si nécessaire */
+        cursor: pointer;
+        display: inline-block; /* Ajustez la taille à son contenu */
+    }
+
+    #resetPassword {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        flex-direction: column;
+        
+}
+
+/* styles.css */
+.my-background {
+    background-image: url('/assets/IMG/fondEcran.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
