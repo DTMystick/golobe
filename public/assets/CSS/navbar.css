@@ -1,6 +1,7 @@
 /* Resize the logo */
 #logo {
-    width: 10%;
+    width: 15%;
+    /* height: 200px; */
 }
 /* CSS for the search bar */
 #searchButton{
