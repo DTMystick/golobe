@@ -5,9 +5,9 @@
 }
 
 .buttoneS {
-  width: 180px;
+  width: 140px;
   height: 40px;
-  background-image: linear-gradient(rgb(214, 202, 254), rgb(42, 17, 126));
+  background-image: linear-gradient(rgb(128, 198, 238), rgb(113, 136, 243));
   border: none;
   border-radius: 50px;
   color: rgb(255, 255, 255);
@@ -17,8 +17,10 @@
   justify-content: center;
   gap: 5px;
   cursor: pointer;
-  box-shadow: 1px 3px 0px rgb(139, 113, 255);
+  box-shadow: 1px 3px 0px rgb(85, 58, 206);
   transition-duration: .3s;
+  list-style: none;
+  text-decoration: none;
 }
 
 .cartIcon {
