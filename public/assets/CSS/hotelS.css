@@ -121,21 +121,6 @@ select {
   font-size: 16px;
 }
 
-.button3 {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.button3:hover {
-  background-color: #0056b3;
-}
-
 /* DESCRIPTION */
 .house-rules {
   max-width: 800px;
@@ -286,3 +271,51 @@ li .tree::before {
   font-weight: bold;
   font-style: italic;
 }
+
+
+
+
+
+
+
+.buttonQQQ {
+  display: inline-block;
+  border-radius: 7px;
+  border: none;
+  background: #1875FF;
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0px 4px 6px 1px #393c3f;
+  width: 100%;
+  padding: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+ }
+ 
+ .buttonQQQ span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+  font-size: 18px;
+ }
+ 
+ .buttonQQQ span:after {
+  content: 'Now';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.7s;
+ }
+ 
+ .buttonQQQ:hover span {
+  padding-right: 3.55em;
+ }
+ 
+ .buttonQQQ:hover span:after {
+  opacity: 4;
+  right: 0;
+ }
