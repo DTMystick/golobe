@@ -319,3 +319,9 @@ li .tree::before {
   opacity: 4;
   right: 0;
  }
+
+ .final {
+  color: #5abfcc;
+  font-style: italic;
+  font-weight: bold;
+ }
