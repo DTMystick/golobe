@@ -1,12 +1,8 @@
-/* styles.css */
-
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
-
-
 
 main h1 {
     text-align: center;
@@ -23,7 +19,7 @@ main h1 {
 .cart-items {
     flex: 2;
     margin-right: 20px;
-}
+} 
 
 .cart-item {
     background-color: #fff;
@@ -35,8 +31,7 @@ main h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 0.91px 0.91px 2px #b5e2e6, -0.91px -0.91px 2px #b1ebe6,
         inset 1.91px 1.91px 2px #b0b4c7, inset -2.91px -2.91px 2px #bcc0cc;
-}
-
+} 
 .product-image {
     box-shadow: 2.91px 2.91px 5px #d3c9c9, -2.91px -2.91px 2px #eee6e6,
         inset 2.91px 2.91px 2px #98a0c0, inset -2.91px -2.91px 2px #8a95b4;

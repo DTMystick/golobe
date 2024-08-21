@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-#check {
+.check {
     color: #A1A1A1;
 }
 
@@ -41,12 +41,6 @@
     object-fit: cover;
 }
 
-/* Styles pour les boutons */
-#homepage .btn {
-    border-radius: 25%;
-    background-color: #00A0B1;
-    align-self: flex-end;
-}
 
 /* Styles pour les sections */
 #homepage .content {

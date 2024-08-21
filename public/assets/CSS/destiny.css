@@ -1,0 +1,62 @@
+.buttoneS:hover {
+  font-style: italic;
+  color: rgb(109, 4, 4);
+  font-weight: 900;
+  background-image: linear-gradient(rgb(72, 40, 216), rgba(63, 95, 201, 0.603));
+}
+
+.buttoneS {
+  background-image: linear-gradient(rgb(128, 198, 238), rgb(113, 136, 243));
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 1px 3px 0px rgb(85, 58, 206);
+  transition-duration: .3s;
+}
+
+.cartIcon {
+  width: 14px;
+  height: fit-content;
+}
+
+.cartIcon path {
+  fill: rgb(247, 247, 250);
+}
+
+.buttoneS:active {
+  transform: translate(2px ,0px);
+  box-shadow: 0px 1px 0px rgb(87, 65, 185);
+  padding-bottom: 1px;
+}
+
+.card {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.devise{
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#randal {
+  margin-left: 13%;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}

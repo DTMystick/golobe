@@ -1,0 +1,166 @@
+
+.dalal{
+    text-align: center;
+}
+ 
+.taneu {
+    margin-left: 5%;
+}
+
+.xaliss {
+    color: rgb(189, 27, 49);
+    font-style: italic;
+    margin-left: 5%;
+}
+
+.tokyo .card-img-top{
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease; /* Animation pour la transformation de l'image */
+    /* position: absolute; */
+}
+.tokyo .card-img-top:hover{
+    transform: scale(1.1);
+}
+
+.tokyo .card {
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease;
+}
+
+.tokyo{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.tokyo .button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #1071cc;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0px 14px 56px -11px #1875FF;
+    width: 10em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
+   }
+   
+   .tokyo .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+   }
+   
+   .tokyo .button span:after {
+    content: 'to cart';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+   }
+   
+   .tokyo .button:hover span {
+    padding-right: 3.55em;
+   }
+   
+   .tokyo .button:hover span:after {
+    opacity: 4;
+    right: 0;
+   }
+
+.tokyo .card-title{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.tokyo .card-title:hover{
+    content: 'duration 1.5hrs';
+}
+
+.animated-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    animation: animateText 3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes animateText {
+    0%, 100% {
+        color: #56b4b0;
+        transform: translateY(0);
+    }
+    50% {
+        color: #be6482;
+        transform: translateY(-20px);
+    }
+}
+
+
+.animated-titles {
+    font-size: 1.5em;
+    color: #333;
+    position: relative;
+    /* white-space: nowrap; Empêche le texte de passer à la ligne */
+    animation: slideIn 40s infinite;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* background-color: #f9f9f9; */
+    font-family: Arial, sans-serif;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.star-rating {
+    display: flex;
+    direction: row;
+}
+
+.star {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold;
+}
+
+.star.selected {
+    color: gold;
+}
