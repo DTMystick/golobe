@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <main id="homepage">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <img id="imgHomepage" src="assets/IMG/homepage.jpg" alt="homepageville">
+            </div>
+            <div class="col-6">
+    <h3 id="explore">EXPLORE THE WORLD</h3>
+    <h1 class="main-title" data-text="Its Time To Travel Around The World">Its Time<br>To Travel Around<br>The World</h1>
+    <br>
+    <p class="check">Check Off the Ultimate Global Travel Checklist With your Travel Partner!
+        <br>Make your vacation a fun, exciting, and unforgettable experience.</p>
+    <br>
+    
+    <button class="btnes">Discover now</button>
+
+</div>
+        </div>
+
+        <section class="content">
+            <h2 id="popular">Our Destinations</h2>
+            <div class="destinations">
+                <a href="barcelonavisit" class="card">
+                    <img class="card-img-top" src="assets/IMG/barcelona.jpg" alt="Card1">
+                    <div class="card-body">
+                        <h5 class="card-title">Barcelona, Spain</h5>
+                        <p class="card-text">"Dreamlike architecture, colorful markets and tasty tapas await you in the Catalan capital."</p>
+                    </div>
+                </a>
+                <a href="tokyovisit" class="card">
+                    <img class="card-img-top" src="assets/IMG/tokyo.jpg" alt="Card2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo, Japan</h5>
+                        <p class="card-text">"Prepare to fall in love with its nightlife, irresistible boutiques and exceptional gastronomy."</p>
+                    </div>
+                </a>
+                <a href="helsinkivisit" class="card">
+                    <img class="card-img-top" src="assets/IMG/helsinki.jpg" alt="Card3">
+                    <div class="card-body">
+                        <h5 class="card-title">Helsinki, Finland</h5>
+                        <p class="card-text">"The Finnish capital fascinates with its clean air, artistic monuments and modern architecture."</p>
+                    </div>
+                </a>
+                <a href="balivisit" class="card">
+                    <img class="card-img-top" src="assets/IMG/bali.jpg" alt="Card4">
+                    <div class="card-body">
+                        <h5 class="card-title">Bali, Indonesia</h5>
+                        <p class="card-text">"This paradise on earth combines breathtaking landscapes, unique biodiversity and characteristic architecture."</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
