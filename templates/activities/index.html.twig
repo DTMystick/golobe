@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activities List{% endblock %}
+
+{% block body %}
+    <h1>Activities List</h1>
+
+    <a href="{{ path('app_activity_new') }}" class="btn btn-primary">Create New Activity</a>
+
+    <ul>
+        {% for activity in activities %}
+            <li>{{ activity.name }} - ${{ activity.price }}</li>
+        {% else %}
+            <li>No activities found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

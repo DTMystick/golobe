@@ -2,65 +2,46 @@
 
 namespace App\Entity;
 
-use App\Repository\ActivityRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ActivityRepository::class)]
+#[ORM\Entity]
 class Activity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\Column(type: 'integer')]
+    private $id;
 
-    #[ORM\Column(length: 255)]
-    private ?string $nameActivity = null;
+    #[ORM\Column(type: 'string', length: 255)]
+    private $name;
 
-    #[ORM\Column]
-    private ?int $priceActivity = null;
-
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Destination $Destination = null;
+    #[ORM\Column(type: 'decimal', scale: 2)]
+    private $price;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNameActivity(): ?string
+    public function getName(): ?string
     {
-        return $this->nameActivity;
+        return $this->name;
     }
 
-    public function setNameActivity(string $nameActivity): static
+    public function setName(string $name): self
     {
-        $this->nameActivity = $nameActivity;
-
+        $this->name = $name;
         return $this;
     }
 
-    public function getPriceActivity(): ?int
+    public function getPrice(): ?float
     {
-        return $this->priceActivity;
+        return $this->price;
     }
 
-    public function setPriceActivity(int $priceActivity): static
+    public function setPrice(float $price): self
     {
-        $this->priceActivity = $priceActivity;
-
-        return $this;
-    }
-
-    public function getDestination(): ?Destination
-    {
-        return $this->Destination;
-    }
-
-    public function setDestination(?Destination $Destination): static
-    {
-        $this->Destination = $Destination;
-
+        $this->price = $price;
         return $this;
     }
 }

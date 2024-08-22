@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add New Activity{% endblock %}
+
+{% block body %}
+    <h1>Add New Activity</h1>
+
+    {{ form_start(activityForm) }}
+    {{ form_widget(activityForm) }}
+    <button type="submit" class="btn btn-success">Save</button>
+    {{ form_end(activityForm) }}
+
+    <a href="{{ path('app_activities') }}" class="btn btn-secondary">Back to Activities List</a>
+{% endblock %}
