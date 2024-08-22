@@ -2,33 +2,36 @@
 
 namespace App\Form;
 
-use App\Entity\Activity;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\MoneyType;
-use Symfony\Component\OptionsResolver\OptionsResolver;
+use App\Entity\Activity; // Entity reference
+use Symfony\Component\Form\AbstractType; // Base form class
+use Symfony\Component\Form\FormBuilderInterface; // Form builder interface
+use Symfony\Component\Form\Extension\Core\Type\TextType; // Text input type
+use Symfony\Component\Form\Extension\Core\Type\MoneyType; // Money input type
+use Symfony\Component\OptionsResolver\OptionsResolver; // Form options resolver
 
 class ActivityType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        // Form fields
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Name of the Activity',
-                'attr' => ['class' => 'form-control']
+                'label' => 'Name of the Activity', // Field label
+                'attr' => ['class' => 'form-control'] // HTML attributes
             ])
             ->add('price', MoneyType::class, [
-                'label' => 'Price',
-                'currency' => 'USD',
-                'attr' => ['class' => 'form-control']
+                'label' => 'Price', // Field label
+                'currency' => 'USD', // Currency type
+                'attr' => ['class' => 'form-control'] // HTML attributes
             ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
+        // Link form to Activity entity
         $resolver->setDefaults([
-            'data_class' => Activity::class,
+            'data_class' => Activity::class, // Data class entity
         ]);
     }
 }
+

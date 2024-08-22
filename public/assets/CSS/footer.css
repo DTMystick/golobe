@@ -1,20 +1,72 @@
+/* Bold titles in footer */
 .titleFooter {
     font-weight: bold;
 }
 
-#logoFooter{
+/* Logo in footer */
+#logoFooter {
     width: 50%;
 }
 
+/* List styling in footer */
 #footer ul, #footer li {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+/* Footer links styling */
 #footer a {
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease;
 }
 
+#footer a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+/* Social media icons in footer */
 #footer .socialMedia {
     width: 10%;
+}
+
+/* Footer layout and positioning */
+#footer {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px 0; /* Padding around footer content */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Fixed height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Content wrapper in footer */
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px; /* Bootstrap container max-width */
+    margin: 0 auto;
+}
+
+/* Footer columns */
+#footer .footer-column {
+    flex: 1;
+    padding: 0 15px; /* Space between columns */
+}
+
+#footer .footer-column h5 {
+    margin-bottom: 15px;
+}
+
+#footer .footer-column ul {
+    padding-left: 0;
+}
+
+#footer .footer-column ul li {
+    margin-bottom: 10px;
 }

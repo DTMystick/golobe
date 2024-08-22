@@ -1,17 +1,47 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} 
+{# Use base layout from base.html.twig #}
 
-{% block title %}Activities List{% endblock %}
+{% block title %}Activities List{% endblock %} 
+{# Set page title to "Activities List" #}
 
 {% block body %}
-    <h1>Activities List</h1>
+    <div class="container"> 
+    {# Create a container for content #}
 
-    <a href="{{ path('app_activity_new') }}" class="btn btn-primary">Create New Activity</a>
+        <h1 class="my-4">Activities List</h1> 
+        {# Display heading "Activities List" with margin #}
 
-    <ul>
-        {% for activity in activities %}
-            <li>{{ activity.name }} - ${{ activity.price }}</li>
-        {% else %}
-            <li>No activities found.</li>
-        {% endfor %}
-    </ul>
+        <a href="{{ path('app_activity_new') }}" class="btn btn-primary mb-3">Create New Activity</a> 
+        {# Button to create a new activity #}
+
+        <ul>
+            {% for activity in activities %}
+            {# Loop through each activity in the activities list #}
+                <li>
+                    <span>{{ activity.name }} - ${{ activity.price }}</span> 
+                    {# Display activity name and price #}
+
+                    <div class="actions">
+                    {# Container for action buttons #}
+
+                        <a href="{{ path('app_activity_edit', {'id': activity.id}) }}" class="btn btn-warning">Edit</a> 
+                        {# Edit button for activity #}
+
+                        {{ form_start(delete_form[activity.id], {'attr': {'style': 'display:inline;'}}) }} 
+                        {# Start form for deleting activity #}
+
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ activity.id) }}">
+                        {# CSRF token: Prevents unauthorized deletion #}
+
+                        {{ form_end(delete_form[activity.id]) }} 
+                        {# End form for deleting activity #}
+
+                    </div>
+                </li>
+            {% else %}
+                <li class="no-activities">No activities found.</li> 
+                {# Message when no activities are found #}
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

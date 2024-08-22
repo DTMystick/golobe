@@ -1,14 +1,23 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}  {# Extends the base layout #}
 
-{% block title %}Add New Activity{% endblock %}
+{% block title %}Add New Activity{% endblock %}  {# Sets the title of the page #}
 
-{% block body %}
-    <h1>Add New Activity</h1>
+{% block body %}  {# Starts the body block #}
+    <div class="container">  {# Wrapper div with Bootstrap container class #}
+        <h1 class="my-4">Add New Activity</h1>  {# Page heading with margin #}
 
-    {{ form_start(activityForm) }}
-    {{ form_widget(activityForm) }}
-    <button type="submit" class="btn btn-success">Save</button>
-    {{ form_end(activityForm) }}
+        {{ form_start(activityForm, {'attr': {'class': 'form'}}) }}  {# Begins the form and adds a class #}
 
-    <a href="{{ path('app_activities') }}" class="btn btn-secondary">Back to Activities List</a>
-{% endblock %}
+        {% if activityForm.vars.errors|length > 0 %}  {# Checks if the form has any errors #}
+            <div class="alert alert-danger mt-3">  {# Error alert with margin-top #}
+                {{ form_errors(activityForm) }}  {# Displays form errors #}
+            </div>
+        {% endif %}
+
+        {{ form_widget(activityForm) }}  {# Renders the form fields #}
+        <button type="submit" class="btn btn-success mt-3">Save</button>  {# Submit button #}
+        {{ form_end(activityForm) }}  {# Ends the form #}
+
+        <a href="{{ path('app_activities') }}" class="btn btn-secondary mt-3">Back to Activities List</a>  {# Back button #}
+    </div>
+{% endblock %}  {# Ends the body block #}
