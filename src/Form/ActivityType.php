@@ -7,6 +7,8 @@ use Symfony\Component\Form\AbstractType; // Base form class
 use Symfony\Component\Form\FormBuilderInterface; // Form builder interface
 use Symfony\Component\Form\Extension\Core\Type\TextType; // Text input type
 use Symfony\Component\Form\Extension\Core\Type\MoneyType; // Money input type
+use Symfony\Component\Form\Extension\Core\Type\TextareaType; // Textarea input type
+use Symfony\Component\Form\Extension\Core\Type\FileType; // File input type
 use Symfony\Component\OptionsResolver\OptionsResolver; // Form options resolver
 
 class ActivityType extends AbstractType
@@ -23,6 +25,16 @@ class ActivityType extends AbstractType
                 'label' => 'Price', // Field label
                 'currency' => 'USD', // Currency type
                 'attr' => ['class' => 'form-control'] // HTML attributes
+            ])
+            ->add('description', TextareaType::class, [
+                'label' => 'Description', // Field label
+                'attr' => ['class' => 'form-control'] // HTML attributes
+            ])
+            ->add('imageFilename', FileType::class, [
+                'label' => 'Upload Image', // Field label
+                'required' => false, // Optional field
+                'mapped' => false, // This field is not directly mapped to the Entity property
+                'attr' => ['class' => 'form-control'] // HTML attributes
             ]);
     }
 
@@ -34,4 +46,3 @@ class ActivityType extends AbstractType
         ]);
     }
 }
-

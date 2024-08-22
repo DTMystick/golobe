@@ -1,23 +1,23 @@
-{% extends 'base.html.twig' %}  {# Extends the base layout #}
+{% extends 'base.html.twig' %} {# Base layout #}
 
-{% block title %}Add New Activity{% endblock %}  {# Sets the title of the page #}
+{% block title %}Add New Activity{% endblock %} {# Page title #}
 
-{% block body %}  {# Starts the body block #}
-    <div class="container">  {# Wrapper div with Bootstrap container class #}
-        <h1 class="my-4">Add New Activity</h1>  {# Page heading with margin #}
+{% block body %} {# Body content #}
+    <div class="container"> {# Bootstrap container #}
+        <h1 class="my-4">Add New Activity</h1> {# Header #}
 
-        {{ form_start(activityForm, {'attr': {'class': 'form'}}) }}  {# Begins the form and adds a class #}
+        {{ form_start(activityForm, {'attr': {'class': 'form'}}) }} {# Start form with CSS class #}
 
-        {% if activityForm.vars.errors|length > 0 %}  {# Checks if the form has any errors #}
-            <div class="alert alert-danger mt-3">  {# Error alert with margin-top #}
-                {{ form_errors(activityForm) }}  {# Displays form errors #}
+        {% if activityForm.vars.errors|length > 0 %} {# Check for form errors #}
+            <div class="alert alert-danger mt-3"> {# Display errors in alert box #}
+                {{ form_errors(activityForm) }} {# Show form errors #}
             </div>
         {% endif %}
 
-        {{ form_widget(activityForm) }}  {# Renders the form fields #}
-        <button type="submit" class="btn btn-success mt-3">Save</button>  {# Submit button #}
-        {{ form_end(activityForm) }}  {# Ends the form #}
+        {{ form_widget(activityForm) }} {# Render form fields #}
+        <button type="submit" class="btn btn-success mt-3">Save</button> {# Submit button #}
+        {{ form_end(activityForm) }} {# End form #}
 
-        <a href="{{ path('app_activities') }}" class="btn btn-secondary mt-3">Back to Activities List</a>  {# Back button #}
+        <a href="{{ path('app_activities') }}" class="btn btn-secondary mt-3">Back to Activities List</a> {# Back button #}
     </div>
-{% endblock %}  {# Ends the body block #}
+{% endblock %}

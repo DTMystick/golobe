@@ -18,6 +18,12 @@ class Activity
     #[ORM\Column(type: 'decimal', scale: 2)] // Decimal column, 2 decimal places
     private $price;
 
+    #[ORM\Column(type: 'text', nullable: true)] // Text column for description
+    private $description;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)] // String column for image filename
+    private $imageFilename;
+
     // Get ID
     public function getId(): ?int
     {
@@ -47,6 +53,32 @@ class Activity
     public function setPrice(float $price): self
     {
         $this->price = $price;
+        return $this;
+    }
+
+    // Get Description
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    // Set Description
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    // Get Image Filename
+    public function getImageFilename(): ?string
+    {
+        return $this->imageFilename;
+    }
+
+    // Set Image Filename
+    public function setImageFilename(?string $imageFilename): self
+    {
+        $this->imageFilename = $imageFilename;
         return $this;
     }
 }

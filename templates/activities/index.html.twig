@@ -1,46 +1,33 @@
-{% extends 'base.html.twig' %} 
-{# Use base layout from base.html.twig #}
+{% extends 'base.html.twig' %} {# Base layout #}
 
-{% block title %}Activities List{% endblock %} 
-{# Set page title to "Activities List" #}
+{% block title %}Activities List{% endblock %} {# Page title #}
 
-{% block body %}
-    <div class="container"> 
-    {# Create a container for content #}
+{% block body %} {# Body content #}
+    <div class="container"> {# Bootstrap container #}
+        <h1 class="my-4">Activities List</h1> {# Header #}
 
-        <h1 class="my-4">Activities List</h1> 
-        {# Display heading "Activities List" with margin #}
+        <a href="{{ path('app_activity_new') }}" class="btn btn-primary mb-3">Create New Activity</a> {# Button to create new activity #}
 
-        <a href="{{ path('app_activity_new') }}" class="btn btn-primary mb-3">Create New Activity</a> 
-        {# Button to create a new activity #}
+        <ul> {# List of activities #}
+            {% for activity in activities %} {# Loop through activities #}
+                <li> {# Activity item #}
+                    <span>{{ activity.name }} - ${{ activity.price }}</span> {# Activity name and price #}
+                    {% if activity.description %} {# Check if description exists #}
+                        <p>{{ activity.description }}</p> {# Display description #}
+                    {% endif %}
+                    {% if activity.imageFilename %} {# Check if image exists #}
+                        <img src="{{ asset('uploads/images/' ~ activity.imageFilename) }}" alt="{{ activity.name }}" width="150"> {# Display image #}
+                    {% endif %}
+                    <div class="actions"> {# Actions container #}
+                        <a href="{{ path('app_activity_edit', {'id': activity.id}) }}" class="btn btn-warning btn-sm">Edit</a> {# Edit button #}
 
-        <ul>
-            {% for activity in activities %}
-            {# Loop through each activity in the activities list #}
-                <li>
-                    <span>{{ activity.name }} - ${{ activity.price }}</span> 
-                    {# Display activity name and price #}
-
-                    <div class="actions">
-                    {# Container for action buttons #}
-
-                        <a href="{{ path('app_activity_edit', {'id': activity.id}) }}" class="btn btn-warning">Edit</a> 
-                        {# Edit button for activity #}
-
-                        {{ form_start(delete_form[activity.id], {'attr': {'style': 'display:inline;'}}) }} 
-                        {# Start form for deleting activity #}
-
-                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ activity.id) }}">
-                        {# CSRF token: Prevents unauthorized deletion #}
-
-                        {{ form_end(delete_form[activity.id]) }} 
-                        {# End form for deleting activity #}
-
+                        {{ form_start(delete_form[activity.id], {'attr': {'style': 'display:inline;'}}) }} {# Start delete form #}
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ activity.id) }}"> {# CSRF token #}
+                        {{ form_end(delete_form[activity.id]) }} {# End delete form #}
                     </div>
                 </li>
-            {% else %}
-                <li class="no-activities">No activities found.</li> 
-                {# Message when no activities are found #}
+            {% else %} {# If no activities #}
+                <li class="no-activities">No activities found.</li> {# Message if no activities #}
             {% endfor %}
         </ul>
     </div>

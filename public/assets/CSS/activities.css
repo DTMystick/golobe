@@ -1,4 +1,4 @@
-General Page Styles
+/* General Page Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f4f4f4;
@@ -23,14 +23,14 @@ h1 {
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 5px 10px;  /* Reduced padding for smaller buttons */
+    padding: 5px 15px;
     border-radius: 5px;
     text-align: center;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-size: 0.9em;  /* Smaller font size for buttons */
+    font-size: 0.9em;
 }
 
 .btn-primary {
@@ -74,21 +74,23 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 30px 0;
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px;  /* Reduced padding inside the list */
+    padding: 20px; /* Increased padding for better spacing */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 li {
     background: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;  /* Reduced padding between items */
+    padding: 20px 0; /* Increased padding for better spacing */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
     align-items: center;
+    text-align: center; /* Center the text */
 }
 
 li:last-child {
@@ -96,8 +98,40 @@ li:last-child {
 }
 
 li span {
-    font-size: 1.1em;  /* Slightly reduced font size for item text */
+    font-size: 1.3em;  /* Increased font size for item text */
+    font-weight: bold;
     color: #333;
+    margin-bottom: 10px; /* Space between text and image */
+}
+
+/* Description Styling */
+li p {
+    font-size: 1.1em; /* Slightly larger description text */
+    color: #666;
+    margin-bottom: 20px; /* Space between description and image */
+    padding: 10px;
+    background-color: #f8f8f8; /* Light background for the description */
+    border-radius: 8px; /* Rounded corners for the description box */
+    width: 90%; /* Constrain the width for a neater layout */
+}
+
+/* Image Styling */
+li img {
+    max-width: 100%; /* Ensure the image fits within the card */
+    max-height: 200px; /* Set a maximum height for the image */
+    width: auto; /* Maintain the aspect ratio */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Crop image to fill the container */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Space between image and buttons */
+}
+
+/* Flexbox for buttons */
+li .actions {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 15px; /* Space between buttons */
+    margin-top: 15px; /* Space above the buttons */
 }
 
 .no-activities {
@@ -105,16 +139,4 @@ li span {
     color: #888;
     font-size: 1.2em;
     margin-top: 20px;
-}
-
-/* Flexbox for buttons */
-li .actions {
-    display: flex;
-    gap: 5px;  /* Reduced gap between buttons */
-    align-items: center;
-}
-
-.actions {
-    display: flex;
-    gap: 10px;
 }
