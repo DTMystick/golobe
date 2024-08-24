@@ -1,0 +1,11 @@
+
+  
+    {{ form_start(form) }}
+    {{ form_label(form.nameDestination, 'Destination', {'label_attr' : {'class' : 'my-1'}})}}
+    {{ form_widget(form.nameDestination, {'attr' : {'class' : 'my-1'}}) }}
+    {{ form_label(form.priceDestination, 'Prix', {'label_attr' : {'class' : 'my-1'}})}}
+    {{ form_widget(form.priceDestination, {'attr' : {'class' : 'my-1'}}) }}
+    <button class="btn btn-primary w-25 my-2">{{ button_label|default('Ajouter') }}</button>
+    {{ form_end(form) }}
+
+    

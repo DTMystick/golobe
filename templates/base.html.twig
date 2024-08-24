@@ -5,22 +5,22 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}     
-        <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/CSS/homepage.css">
-        <link rel="stylesheet" href="assets/CSS/navbar.css">
-        <link rel="stylesheet" href="assets/CSS/navbarConnected.css">
-        <link rel="stylesheet" href="assets/CSS/footer.css">
-        <link rel="stylesheet" href="assets/CSS/order.css">
-        <link rel="stylesheet" href="assets/CSS/adminDashboard.css">
-        <link rel="stylesheet" href="assets/CSS/help.css">
-        <link rel="stylesheet" href="assets/CSS/activities.css">
-        <link rel="stylesheet" href="assets/CSS/rgpd.css">
-        <link rel="stylesheet" href="assets/CSS/payment.css">
-        <link rel="stylesheet" href="assets/CSS/notice.css">
-        <link rel="stylesheet" href="assets/CSS/request.css">
-        <link rel="stylesheet" href="assets/CSS/register.css">
-        <link rel="stylesheet" href="assets/CSS/destiny.css">
-        <link rel="stylesheet" href="assets/CSS/hotel.css">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/homepage.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/navbarConnected.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/footer.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/order.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/adminDashboard.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/help.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/activities.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/rgpd.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/payment.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/notice.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/request.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/register.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/destiny.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/CSS/hotel.css')}}">
         {% endblock %}
 
         {% block javascripts %}

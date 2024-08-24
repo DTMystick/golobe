@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Destination{% endblock %}
+
+{% block body %}
+<h1>Create new Destination</h1>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 bg-white rounded shadow">
+        {{ include('destination_crud/_form.html.twig') }}
+        <a href="{{ path('app_destination_crud_index') }}" class="btn btn-primary my-2 w-25">Retour</a>
+    </div>
+    <div class="col-4"></div>
+</div>
+
+{% endblock %}

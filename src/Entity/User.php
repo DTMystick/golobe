@@ -22,10 +22,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $email = null;
 
     /**
-     * @var list<string> The user roles
+     * @var list<string> The user role
      */
     #[ORM\Column]
-    private array $roles = [];
+    private array $role = [];
 
     /**
      * @var string The hashed password
@@ -76,19 +76,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getRoles(): array
     {
-        $roles = $this->roles;
+        $role = $this->role;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $role[] = 'ROLE_USER';
 
-        return array_unique($roles);
+        return array_unique($role);
     }
 
     /**
-     * @param list<string> $roles
+     * @param list<string> $role
      */
-    public function setRoles(array $roles): static
+    public function setRoles(array $role): static
     {
-        $this->roles = $roles;
+        $this->role = $role;
 
         return $this;
     }
