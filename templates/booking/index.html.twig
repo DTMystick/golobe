@@ -3,7 +3,10 @@
 {% block title %}Booking index{% endblock %}
 
 {% block body %}
-    <h1>Booking index</h1>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+    <h1>Liste des reservations</h1>
 
     <table class="table">
         <thead>
@@ -31,5 +34,8 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_booking_new') }}">Create new</a>
+    <a href="{{ path('app_booking_new') }}" class="btn btn-primary">Create new</a>
+</div>
+</div>
+    <div class="col-2"></div>
 {% endblock %}
