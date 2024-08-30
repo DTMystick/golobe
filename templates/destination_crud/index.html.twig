@@ -6,14 +6,14 @@
 <div class="row">
     <div class="col-2"></div>
     <div class="col-8">
-        <h1>Destination index</h1>
+        <h1>Liste des destinations</h1>
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>NameDestination</th>
-                <th>PriceDestination</th>
-                <th>actions</th>
+                <th>Pays</th>
+                <th>Prix</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                 <td>{{ destination.nameDestination }}</td>
                 <td>{{ destination.priceDestination }}</td>
                 <td>
-                    <a href="{{ path('app_destination_crud_show', {'id': destination.id}) }}">show</a>
-                    <a href="{{ path('app_destination_crud_edit', {'id': destination.id}) }}">edit</a>
+                    <a href="{{ path('app_destination_crud_show', {'id': destination.id}) }}" class="btn btn-primary">Details</a>
+                    <a href="{{ path('app_destination_crud_edit', {'id': destination.id}) }}" class="btn btn-primary">Modifier</a>
                 </td>
             </tr>
             {% else %}
@@ -34,7 +34,7 @@
             {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('app_destination_crud_new') }}" class="btn btn-primary">Create new</a>
+    <a href="{{ path('app_destination_crud_new') }}" class="btn btn-primary">Ajouter</a>
 </div>
 </div>
     <div class="col-2"></div>
